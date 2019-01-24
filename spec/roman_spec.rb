@@ -19,5 +19,14 @@ RSpec.describe Roman do
   it_behaves_like 'to roman converter', 10, 'X'
   it_behaves_like 'to roman converter', 11, 'XI'
   it_behaves_like 'to roman converter', 12, 'XII'
+  it_behaves_like 'to roman converter', 14, 'XIV'
+  it_behaves_like 'to roman converter', 15, 'XV'
+  it_behaves_like 'to roman converter', 16, 'XVI'
+  it_behaves_like 'to roman converter', 19, 'XIX'
+  it_behaves_like 'to roman converter', 39, 'XXXIX'
+  it_behaves_like 'to roman converter', 40, 'XL'
+  it_behaves_like 'to roman converter', 41, 'XLI'
+  it_behaves_like 'to roman converter', 49, 'XLIX'
+  it_behaves_like 'to roman converter', 50, 'L'
 
 end
