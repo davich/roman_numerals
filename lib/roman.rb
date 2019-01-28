@@ -1,15 +1,16 @@
 class Roman
+  LOOKUP = [
+    [40, 'XL'],
+    [10, 'X'],
+    [9, 'IX'],
+    [5, 'V'],
+    [4, 'IV'],
+    [1, 'I'],
+  ]
+
   def self.to_roman(i)
-    [
-      ['L', 50],
-      ['XL', 40],
-      ['X', 10],
-      ['IX', 9],
-      ['V', 5],
-      ['IV', 4],
-      ['I', 1],
-    ].each do |roman, arabic|
-      return roman + to_roman(i-arabic) if i >= arabic
+    LOOKUP.each.with_index do |(arabic, roman), index|
+      return roman + to_roman(i - arabic) if i >= arabic
     end
     ''
   end
